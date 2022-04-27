@@ -24,7 +24,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class RegisterTests {
 	public static WebDriver driver;
 	private Map<String,Object>vars;
-	private RegisterSevices registerServices;
+	private RegisterSevrice registerServices;
 	private JavascriptExecutor js;
 	
 	@Before
@@ -35,12 +35,12 @@ public class RegisterTests {
 		driver = new ChromeDriver();
 		js = (JavascriptExecutor)driver;
 		vars = new HashMap<String,Object>();
-		registerServices = new RegisterSevices();
+		registerServices = new RegisterSevrice();
 	}
 	
 	@After
 	public void tearDown() {
-//		driver.quit();
+		driver.quit();
 	}
 	
 	@Test
@@ -48,7 +48,8 @@ public class RegisterTests {
 		try {
 			String userName = UUID.randomUUID().toString();
 			registerServices.register(driver, "Yarden", "Dahan", userName, "Ya111111#", true, true);
-			WebElement logoutBtn = driver.findElement(By.id("login"));
+			driver.switchTo().alert().accept();
+			WebElement logoutBtn = driver.findElement(By.id("submit"));
 			
 			if (logoutBtn.isDisplayed()) {
 				logoutBtn.click();
@@ -101,13 +102,14 @@ public class RegisterTests {
 			WebElement m = driver.findElement(By.id("gotologin"));
 			m.click();
 
-			WebDriverWait wait = new WebDriverWait(driver, 10);
+			WebDriverWait wait = new WebDriverWait(driver, 20);
 			m = driver.findElement(By.id("name"));
 
 			wait.until(ExpectedConditions.textToBePresentInElement(m, "Please verify reCaptcha to register!"));
 			System.out.println("\"register with without checkbox mark - Success\"");
 		} catch (Exception e) {
-				fail("\"register with without checkbox mark - Failed\"");
+			e.printStackTrace();
+			fail("\"register with without checkbox mark - Failed\"");
 		}
 
 	}
