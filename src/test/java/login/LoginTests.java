@@ -1,10 +1,9 @@
 package login;
 
-import static org.junit.Assert.fail;
-
 import java.util.HashMap;
-import java.util.Map;
- 
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -13,11 +12,7 @@ import org.junit.jupiter.api.MethodOrderer.OrderAnnotation;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -27,9 +22,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 @TestMethodOrder(OrderAnnotation.class)
 public class LoginTests {
 	public static WebDriver driver;
-	private Map<String, Object> vars;
 	private LoginServices loginServices;
-	private JavascriptExecutor js;
 	private static Logger logger;
 	private static final long TIME_INTERVAL = 2000;
 
@@ -42,7 +35,7 @@ public class LoginTests {
 	@AfterAll
 	public static void tearLogger() throws InterruptedException {
 		logger = LogManager.getLogger();
-		logger.info("Login testsets - end");
+		logger.info("Login testsets - end\n");
 		Thread.sleep(TIME_INTERVAL);
 		driver.quit();
 	}
@@ -53,8 +46,7 @@ public class LoginTests {
 				"C:\\Users\\Yarden\\Downloads\\chromedriver_win32\\chromedriver.exe");
 
 		driver = new ChromeDriver();
-		js = (JavascriptExecutor) driver;
-		vars = new HashMap<String, Object>();
+		new HashMap<String, Object>();
 		loginServices = new LoginServices();
 	}
 
@@ -69,7 +61,7 @@ public class LoginTests {
 		
 		logger.info("Login happy flow test - begin");
 		try {
-			loginServices.login(driver, "Yardenale", "Ya111111#");
+			loginServices.login(driver, "Yardenale", "Ya111111#",logger);
 			WebElement logoutBtn = driver.findElement(By.id("submit"));
 			if (logoutBtn.isDisplayed()) {
 				logoutBtn.click();
@@ -80,7 +72,7 @@ public class LoginTests {
 			logger.error("\tLogin happy flow test - failed:\n\t\t " + e.getMessage());
 		} finally {
 			logger.info("Login happy flow test - end");
-		}
+		}  
 
 	}
 
@@ -91,7 +83,7 @@ public class LoginTests {
 		String password = "eam";
 
 		try {
-			loginServices.login(driver, "Yardenale", password);
+			loginServices.login(driver, "Yardenale", password,logger);
 			WebDriverWait wait = new WebDriverWait(driver, 10);
 			WebElement m = driver.findElement(By.id("name"));
 			wait.until(ExpectedConditions.textToBePresentInElement(m, "Invalid username or password!"));
@@ -108,7 +100,7 @@ public class LoginTests {
 	public void logginWrongUserNameTest() {
 		logger.info("Login with wrong user name test - begin");		String usernam = "eam" ;
 		try {
-			loginServices.login(driver, usernam, "Ya111111#");
+			loginServices.login(driver, usernam, "Ya111111#",logger);
 			WebDriverWait wait = new WebDriverWait(driver, 10);
 			WebElement m = driver.findElement(By.id("name"));
 			wait.until(ExpectedConditions.textToBePresentInElement(m, "Invalid username or password!"));
