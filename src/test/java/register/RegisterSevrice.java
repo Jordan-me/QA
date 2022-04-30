@@ -1,21 +1,21 @@
-package Register;
+package register;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+ 
 import org.openqa.selenium.WebElement;
 
-public class RegisterSevices {
-
+public class RegisterSevrice {
 	public void register(WebDriver driver, String name, String lastName, String userName, String password,
-			boolean notRobot, boolean toRegister) throws InterruptedException {
+			boolean toRegister, boolean notRobot ) throws InterruptedException {
 		driver.manage().window().maximize();
 		driver.get("https://demoqa.com/books");
 		driver.findElement(By.id("login")).click();
 		driver.findElement(By.id("newUser")).click();
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,400)", "");
+		js.executeScript("window.scrollBy(0,100)", "");
 		if (toRegister) {
 			WebElement m = driver.findElement(By.id("firstname"));
 			m.click();
@@ -43,8 +43,9 @@ public class RegisterSevices {
 
 			m = driver.findElement(By.id("register"));
 			m.click();
-			js.executeScript("window.scrollBy(0,400)", "");
+			js.executeScript("window.scrollBy(0,500)", "");
 		}
 		Thread.sleep(4000);
 	}
+	
 }
