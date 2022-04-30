@@ -1,5 +1,6 @@
 package search;
 
+import java.io.IOException;
 import java.util.HashMap;
 
 import org.apache.logging.log4j.LogManager;
@@ -19,23 +20,25 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import sanityTest.ReadExcl;
+import sanityTest.VarsKey;
+
 
 @TestMethodOrder(OrderAnnotation.class)
 public class SearchTests {
 	public static WebDriver driver;
-	private static Logger logger;
+	private final static Logger logger = LogManager.getLogger();
 	private static final long TIME_INTERVAL = 2000;
 	private SearchServices searchServices;
 
 	@BeforeAll
-	public static void setUpLogger() {
-		logger = LogManager.getLogger();
+	public static void setUpLogger() throws IOException {
+		ReadExcl.readExcel("", "variables.xlsx", "input",logger);
 		logger.info("Search testsets - begin\n");
 	}
 
 	@AfterAll
 	public static void tearLogger() throws InterruptedException {
-		logger = LogManager.getLogger();
 		logger.info("Search testsets - end\n");
 		Thread.sleep(TIME_INTERVAL);
 		driver.quit();
@@ -59,7 +62,9 @@ public class SearchTests {
 	@Test
 	@Order(1)
 	public void searchHappyFlowTest() {
-		searchServices.search(driver, "Git",logger);
+		searchServices.search(driver, 
+				ReadExcl.getValue(VarsKey.searchString.name(), logger)
+				,logger);
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		try {
 			WebElement m = driver.findElement(By.className("rt-noData"));

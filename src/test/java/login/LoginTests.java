@@ -1,5 +1,6 @@
 package login;
 
+import java.io.IOException;
 import java.util.HashMap;
 
 import org.apache.logging.log4j.LogManager;
@@ -19,35 +20,38 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import sanityTest.ReadExcl;
+import sanityTest.VarsKey;
+
 @TestMethodOrder(OrderAnnotation.class)
 public class LoginTests {
 	public static WebDriver driver;
 	private LoginServices loginServices;
-	private static Logger logger;
+	private final static Logger logger = LogManager.getLogger();
 	private static final long TIME_INTERVAL = 2000;
 
 	@BeforeAll
-	public static void setUpLogger() {
-		logger = LogManager.getLogger();
+	public static void setUpLogger() throws IOException {
+		ReadExcl.readExcel("", "variables.xlsx", "input",logger);
 		logger.info("Login testsets - begin\n");
 	}
 
 	@AfterAll
 	public static void tearLogger() throws InterruptedException {
-		logger = LogManager.getLogger();
 		logger.info("Login testsets - end\n");
 		Thread.sleep(TIME_INTERVAL);
 		driver.quit();
 	}
-   
+     
 	@BeforeEach
-	public void setUp() {
+	public void setUp() throws InterruptedException {
 		System.setProperty("webdriver.chrome.driver",
 				"C:\\Users\\Yarden\\Downloads\\chromedriver_win32\\chromedriver.exe");
 
 		driver = new ChromeDriver();
 		new HashMap<String, Object>();
 		loginServices = new LoginServices();
+		Thread.sleep(TIME_INTERVAL);
 	}
 
 	@AfterEach
@@ -57,11 +61,12 @@ public class LoginTests {
 
 	@Test
 	@Order(1)
-	public void logginTest() {
+	public void logginHappyFlowTest() {
 		
 		logger.info("Login happy flow test - begin");
 		try {
-			loginServices.login(driver, "Yardenale", "Ya111111#",logger);
+			loginServices.login(driver, ReadExcl.getValue(VarsKey.userName.name(), logger)
+					, ReadExcl.getValue(VarsKey.password.name(), logger),logger);
 			WebElement logoutBtn = driver.findElement(By.id("submit"));
 			if (logoutBtn.isDisplayed()) {
 				logoutBtn.click();
@@ -79,11 +84,10 @@ public class LoginTests {
 	@Test
 	@Order(2)
 	public void logginWrongPasswordTest() {
-		logger.info("Login with wrong password test - begin");
-		String password = "eam";
-
+		logger.info("Login with wrong password test - begin");  
 		try {
-			loginServices.login(driver, "Yardenale", password,logger);
+			loginServices.login(driver, ReadExcl.getValue(VarsKey.userName.name(), logger)
+					, ReadExcl.getValue(VarsKey.wrongPassword.name(), logger),logger);
 			WebDriverWait wait = new WebDriverWait(driver, 10);
 			WebElement m = driver.findElement(By.id("name"));
 			wait.until(ExpectedConditions.textToBePresentInElement(m, "Invalid username or password!"));
@@ -98,9 +102,11 @@ public class LoginTests {
 	@Test
 	@Order(3)
 	public void logginWrongUserNameTest() {
-		logger.info("Login with wrong user name test - begin");		String usernam = "eam" ;
+		logger.info("Login with wrong user name test - begin");		
 		try {
-			loginServices.login(driver, usernam, "Ya111111#",logger);
+			loginServices.login(driver, ReadExcl.getValue(VarsKey.wrongUserName.name(), logger)
+					, ReadExcl.getValue(VarsKey.password.name(), logger),logger);
+
 			WebDriverWait wait = new WebDriverWait(driver, 10);
 			WebElement m = driver.findElement(By.id("name"));
 			wait.until(ExpectedConditions.textToBePresentInElement(m, "Invalid username or password!"));

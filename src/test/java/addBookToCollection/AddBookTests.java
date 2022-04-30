@@ -1,5 +1,6 @@
 package addBookToCollection;
 
+import java.io.IOException;
 import java.util.HashMap;
 
 import org.apache.logging.log4j.LogManager;
@@ -15,23 +16,25 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import login.LoginServices;
+import sanityTest.ReadExcl;
+import sanityTest.VarsKey;
 
 public class AddBookTests {
 	public static WebDriver driver;
 	private LoginServices loginServices;
 	private AddBookServices addBookServices;
-	private static Logger logger;
+	private final static Logger logger = LogManager.getLogger();
 	private static final long TIME_INTERVAL = 2000;
 	
+
 	@BeforeAll
-	public static void setUpLogger() {
-		logger = LogManager.getLogger();
+	public static void setUpLogger() throws IOException {
+		ReadExcl.readExcel("", "variables.xlsx", "input",logger);
 		logger.info("Login testsets - begin\n");
 	}
 
 	@AfterAll
 	public static void tearLogger() throws InterruptedException {
-		logger = LogManager.getLogger();
 		logger.info("Login testsets - end\n");
 		Thread.sleep(TIME_INTERVAL);
 		driver.quit();
@@ -55,9 +58,10 @@ public class AddBookTests {
 	@Test
 	public void addBookTest() {
 		
-		logger.info("Add Book happy flow test - begin");
+		AddBookTests.logger.info("Add Book happy flow test - begin");
 		try {
-			loginServices.login(driver, "Yardenale", "Ya111111#",logger);
+			loginServices.login(driver, ReadExcl.getValue(VarsKey.userName.name(), logger)
+					, ReadExcl.getValue(VarsKey.password.name(), logger),logger);
 			Thread.sleep(3000);
 			addBookServices.addBook(driver,logger);
 			WebElement logoutBtn = driver.findElement(By.id("submit"));

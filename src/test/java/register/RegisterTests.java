@@ -6,9 +6,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -23,22 +23,18 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class RegisterTests {
 	public static WebDriver driver;
-	private Map<String,Object>vars;
 	private RegisterSevrice registerServices;
-	private JavascriptExecutor js;
 	
-	@Before
+	@BeforeEach
 	public void setUp() {
 		System.setProperty("webdriver.chrome.driver",
 				"C:\\Users\\Yarden\\Downloads\\chromedriver_win32\\chromedriver.exe");
 		
 		driver = new ChromeDriver();
-		js = (JavascriptExecutor)driver;
-		vars = new HashMap<String,Object>();
 		registerServices = new RegisterSevrice();
 	}
 	
-	@After
+	@AfterEach
 	public void tearDown() {
 		driver.quit();
 	}
@@ -98,7 +94,7 @@ public class RegisterTests {
 	@Test 
 	public void RegisterWithoutCheckbox() {
 		try {
-			registerServices.register(driver, "Dahan", "Tzemah", "yardi", "Ya111111", true, false);
+			registerServices.register(driver, "Ram", "Tzemah", "rami", "Ya111111", true, false);
 			WebElement m = driver.findElement(By.id("gotologin"));
 			m.click();
 
@@ -112,7 +108,7 @@ public class RegisterTests {
 			fail("\"register with without checkbox mark - Failed\"");
 		}
 
-	}
+	}  
 
 }
  

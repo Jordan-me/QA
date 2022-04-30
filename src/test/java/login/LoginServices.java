@@ -17,7 +17,7 @@ public class LoginServices {
 		//3| type| name = login| click
 		WebElement inputField = driver.findElement(By.id("userName"));
 		inputField.click();
-		inputField.sendKeys(userName);
+		inputField.sendKeys(userName);  
 		inputField = driver.findElement(By.id("password"));
 		inputField.click();
 		inputField.sendKeys(password);

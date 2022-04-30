@@ -56,7 +56,7 @@ public class automateCaptchaInSelenium {
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30).getSeconds());
             wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(
                     By.xpath("//iframe[starts-with(@name, 'a-') and starts-with(@src, 'https://www.google.com/recaptcha')]")));
-           
+            
              wait.until(ExpectedConditions.elementToBeClickable(
                         By.xpath("//div[@class='recaptcha-checkbox-border']"))).click();
  

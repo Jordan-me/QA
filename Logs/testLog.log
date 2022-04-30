@@ -1,66 +1,30 @@
-[INFO ] 2022-04-30 19:20:09.077 [main] LoginTests - Login testsets - begin
+[INFO ] 2022-04-30 22:45:33.192 [main] LoginTests - 		ReadExcl (readExcel) -> searching for file: variables.xlsx
+[INFO ] 2022-04-30 22:45:33.199 [main] LoginTests - 		ReadExcl (readExcel) -> the file is .xlsx
+[INFO ] 2022-04-30 22:45:33.903 [main] LoginTests - 		ReadExcl (readExcel) -> export sheet: input
+[INFO ] 2022-04-30 22:45:33.903 [main] LoginTests - 		ReadExcl (readExcel) -> total rows (4)
+[INFO ] 2022-04-30 22:45:33.909 [main] LoginTests - Login testsets - begin
 
-[INFO ] 2022-04-30 19:20:13.630 [main] LoginTests - Login happy flow test - begin
-[INFO ] 2022-04-30 19:20:18.683 [main] LoginTests - 	LoginServices (login) -> Login button pressed
-[INFO ] 2022-04-30 19:20:19.194 [main] LoginTests - 	LoginServices (login) -> Username and password fields have been filled
-[INFO ] 2022-04-30 19:20:23.571 [main] LoginTests - 	Login happy flow test - Passed
-[INFO ] 2022-04-30 19:20:23.571 [main] LoginTests - Login happy flow test - end
-[INFO ] 2022-04-30 19:20:26.600 [main] LoginTests - Login with wrong password test - begin
-[INFO ] 2022-04-30 19:20:32.088 [main] LoginTests - 	LoginServices (login) -> Login button pressed
-[INFO ] 2022-04-30 19:20:32.889 [main] LoginTests - 	LoginServices (login) -> Username and password fields have been filled
-[INFO ] 2022-04-30 19:20:37.148 [main] LoginTests - 	Login with wrong password test - Passed
-[INFO ] 2022-04-30 19:20:37.148 [main] LoginTests - Login with wrong password test - end
-[INFO ] 2022-04-30 19:20:40.963 [main] LoginTests - Login with wrong user name test - begin
-[INFO ] 2022-04-30 19:20:44.281 [main] LoginTests - 	LoginServices (login) -> Login button pressed
-[INFO ] 2022-04-30 19:20:44.958 [main] LoginTests - 	LoginServices (login) -> Username and password fields have been filled
-[INFO ] 2022-04-30 19:20:49.257 [main] LoginTests - 	Login with wrong user name test - Passed
-[INFO ] 2022-04-30 19:20:49.258 [main] LoginTests - Login with wrong user name test - end
+[INFO ] 2022-04-30 22:45:38.435 [main] LoginTests - Login happy flow test - begin
+[INFO ] 2022-04-30 22:45:38.439 [main] LoginTests - 		ReadExcl (readExcel) -> return velue: userName = Yardenale
+[INFO ] 2022-04-30 22:45:38.440 [main] LoginTests - 		ReadExcl (readExcel) -> return velue: password = Ya111111#
+[INFO ] 2022-04-30 22:45:45.402 [main] LoginTests - 	LoginServices (login) -> Login button pressed
+[INFO ] 2022-04-30 22:45:45.670 [main] LoginTests - 	LoginServices (login) -> Username and password fields have been filled
+[INFO ] 2022-04-30 22:45:49.981 [main] LoginTests - 	Login happy flow test - Passed
+[INFO ] 2022-04-30 22:45:49.981 [main] LoginTests - Login happy flow test - end
+[INFO ] 2022-04-30 22:45:54.349 [main] LoginTests - Login with wrong password test - begin
+[INFO ] 2022-04-30 22:45:54.349 [main] LoginTests - 		ReadExcl (readExcel) -> return velue: userName = Yardenale
+[INFO ] 2022-04-30 22:45:54.349 [main] LoginTests - 		ReadExcl (readExcel) -> return velue: wrongPassword = eam
+[INFO ] 2022-04-30 22:45:56.941 [main] LoginTests - 	LoginServices (login) -> Login button pressed
+[INFO ] 2022-04-30 22:45:57.249 [main] LoginTests - 	LoginServices (login) -> Username and password fields have been filled
+[INFO ] 2022-04-30 22:46:01.437 [main] LoginTests - 	Login with wrong password test - Passed
+[INFO ] 2022-04-30 22:46:01.437 [main] LoginTests - Login with wrong password test - end
+[INFO ] 2022-04-30 22:46:05.663 [main] LoginTests - Login with wrong user name test - begin
+[INFO ] 2022-04-30 22:46:05.665 [main] LoginTests - 		ReadExcl (readExcel) -> return velue: wrongUserName = wrongUsername
+[INFO ] 2022-04-30 22:46:05.665 [main] LoginTests - 		ReadExcl (readExcel) -> return velue: password = Ya111111#
+[INFO ] 2022-04-30 22:46:08.090 [main] LoginTests - 	LoginServices (login) -> Login button pressed
+[INFO ] 2022-04-30 22:46:08.350 [main] LoginTests - 	LoginServices (login) -> Username and password fields have been filled
+[INFO ] 2022-04-30 22:46:12.492 [main] LoginTests - 	Login with wrong user name test - Passed
+[INFO ] 2022-04-30 22:46:12.492 [main] LoginTests - Login with wrong user name test - end
 
-[INFO ] 2022-04-30 19:20:50.326 [main] LoginTests - Login testsets - end
-[INFO ] 2022-04-30 19:21:07.347 [main] SortTests - Sort testsets - begin
-
-[INFO ] 2022-04-30 19:21:16.447 [main] SortTests - 	LoginServices (login) -> Login button pressed
-[INFO ] 2022-04-30 19:21:17.255 [main] SortTests - 	LoginServices (login) -> Username and password fields have been filled
-[ERROR] 2022-04-30 19:21:29.322 [main] SortTests - 	Sort Books By Title test - failed:
-		 expected:<[Understanding ECMAScript 6, Eloquent JavaScript, Second Edition, Programming JavaScript Applications, You Don't Know JS, Speaking JavaScript, Designing Evolvable Web APIs with ASP.NET, Learning JavaScript Design Patterns, Git Pocket Guide]> but was:<[Git Pocket Guide, Learning JavaScript Design Patterns, Designing Evolvable Web APIs with ASP.NET, Speaking JavaScript, You Don't Know JS, Programming JavaScript Applications, Eloquent JavaScript, Second Edition, Understanding ECMAScript 6]>
-[INFO ] 2022-04-30 19:21:29.322 [main] SortTests - Sort Books By Title test - end
-[INFO ] 2022-04-30 19:21:39.984 [main] SortTests - 	LoginServices (login) -> Login button pressed
-[INFO ] 2022-04-30 19:21:40.626 [main] SortTests - 	LoginServices (login) -> Username and password fields have been filled
-[ERROR] 2022-04-30 19:21:52.554 [main] SortTests - 	Sort Books By Publisher test - failed:
-		 expected:<[Understanding ECMAScript 6, Eloquent JavaScript, Second Edition, Programming JavaScript Applications, You Don't Know JS, Speaking JavaScript, Designing Evolvable Web APIs with ASP.NET, Learning JavaScript Design Patterns, Git Pocket Guide]> but was:<[Eloquent JavaScript, Second Edition, Understanding ECMAScript 6, Git Pocket Guide, Learning JavaScript Design Patterns, Designing Evolvable Web APIs with ASP.NET, Speaking JavaScript, You Don't Know JS, Programming JavaScript Applications]>
-[INFO ] 2022-04-30 19:21:52.555 [main] SortTests - Sort Books By Publisher test - end
-[INFO ] 2022-04-30 19:22:04.139 [main] SortTests - 	LoginServices (login) -> Login button pressed
-[INFO ] 2022-04-30 19:22:04.783 [main] SortTests - 	LoginServices (login) -> Username and password fields have been filled
-[ERROR] 2022-04-30 19:22:16.397 [main] SortTests - 	Sort Books By Author test - failed:
-		 expected:<[Understanding ECMAScript 6, Eloquent JavaScript, Second Edition, Programming JavaScript Applications, You Don't Know JS, Speaking JavaScript, Designing Evolvable Web APIs with ASP.NET, Learning JavaScript Design Patterns, Git Pocket Guide]> but was:<[Learning JavaScript Design Patterns, Speaking JavaScript, Programming JavaScript Applications, Designing Evolvable Web APIs with ASP.NET, You Don't Know JS, Eloquent JavaScript, Second Edition, Understanding ECMAScript 6, Git Pocket Guide]>
-[INFO ] 2022-04-30 19:22:16.399 [main] SortTests - Sort Books By Author test - end
-[INFO ] 2022-04-30 19:22:20.315 [main] SortTests - Sort testsets - end
-[INFO ] 2022-04-30 19:22:26.932 [main] AddBookTests - Login testsets - begin
-
-[INFO ] 2022-04-30 19:22:31.142 [main] AddBookTests - Add Book happy flow test - begin
-[INFO ] 2022-04-30 19:22:34.677 [main] AddBookTests - 	LoginServices (login) -> Login button pressed
-[INFO ] 2022-04-30 19:22:35.485 [main] AddBookTests - 	LoginServices (login) -> Username and password fields have been filled
-[INFO ] 2022-04-30 19:22:44.284 [main] AddBookTests - 	AddBookServices (addBook) -> Selected book 
-[INFO ] 2022-04-30 19:22:44.784 [main] AddBookTests - 	AddBookServices (addBook) -> Selected book added to my collection 
-[INFO ] 2022-04-30 19:22:50.120 [main] AddBookTests - 	Add Book happy flow test - Passed
-[INFO ] 2022-04-30 19:22:50.121 [main] AddBookTests - Add Book happy flow test - end
-[INFO ] 2022-04-30 19:22:51.070 [main] AddBookTests - Login testsets - end
-[INFO ] 2022-04-30 19:41:58.933 [main] SearchTests - Search testsets - begin
-
-
-
-[INFO ] 2022-04-30 19:45:42.582 [main] SearchTests - Search testsets - begin
-
-[INFO ] 2022-04-30 19:45:52.485 [main] SearchTests - 	SearchServices (search) -> Search box filled
-[INFO ] 2022-04-30 19:45:52.692 [main] SearchTests - 	Search happy flow test - passed:
-		 
-[INFO ] 2022-04-30 19:45:52.693 [main] SearchTests - Search happy flow test - end
-[INFO ] 2022-04-30 19:46:01.851 [main] SearchTests - 	SearchServices (search) -> Search box filled
-[INFO ] 2022-04-30 19:46:01.959 [main] SearchTests - 	Empty Search test- passed:
-		 
-[INFO ] 2022-04-30 19:46:01.960 [main] SearchTests - Empty Search test - end
-[INFO ] 2022-04-30 19:46:10.354 [main] SearchTests - 	SearchServices (search) -> Search box filled
-[INFO ] 2022-04-30 19:46:10.715 [main] SearchTests - 	Empty Search test - passed
-[INFO ] 2022-04-30 19:46:10.715 [main] SearchTests - Empty Search test - end
-[INFO ] 2022-04-30 19:46:11.867 [main] SearchTests - Search testsets - end
+[INFO ] 2022-04-30 22:46:13.258 [main] LoginTests - Login testsets - end
 
