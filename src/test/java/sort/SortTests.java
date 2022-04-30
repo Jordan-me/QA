@@ -60,7 +60,7 @@ public class SortTests {
 		List<WebElement> afterFilterTitle = driver.findElements(By.className("mr-2"));
 		List<String> afterFilterTitleList = new ArrayList<String>();
 		for(WebElement p: afterFilterTitle){
-			
+			 
 			afterFilterTitleList.add(p.getText());
 		}
 		
