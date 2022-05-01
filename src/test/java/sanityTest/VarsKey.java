@@ -4,6 +4,12 @@ public enum VarsKey {
 	userName,password,
 	wrongPassword
 	,wrongUserName
-	,searchString
+	,searchString,
+	regFName,regLName,
+	regUserName,
+	regPassword,
+	regWrongPassword,
+	regWrongPasswordMSG,
+	regCaptchaMSG
 
 }

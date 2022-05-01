@@ -71,7 +71,7 @@ public class SearchTests {
 			wait.until(ExpectedConditions.textToBePresentInElement(m, "No rows found"));
 			logger.error("\tSearch happy flow test - failed");
 		} catch (Exception e) {
-			logger.info("\tSearch happy flow test - passed:\n\t\t ");
+			logger.info("\tSearch happy flow test - passed\n\t\t ");
 		} finally {
 			logger.info("Search happy flow test - end");
 		}  
@@ -87,7 +87,7 @@ public class SearchTests {
 			wait.until(ExpectedConditions.textToBePresentInElement(m, "No rows found"));
 			logger.error("\tEmpty Search test - failed");
 		} catch (Exception e) {
-			logger.info("\tEmpty Search test- passed:\n\t\t ");
+			logger.info("\tEmpty Search test- passed\n\t\t ");
 		} finally {
 			logger.info("Empty Search test - end");
 		}  

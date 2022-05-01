@@ -30,12 +30,12 @@ public class AddBookTests {
 	@BeforeAll
 	public static void setUpLogger() throws IOException {
 		ReadExcl.readExcel("", "variables.xlsx", "input",logger);
-		logger.info("Login testsets - begin\n");
+		logger.info("Add Book testsets - begin\n");
 	}
 
 	@AfterAll
 	public static void tearLogger() throws InterruptedException {
-		logger.info("Login testsets - end\n");
+		logger.info("Add Book testsets - end\n");
 		Thread.sleep(TIME_INTERVAL);
 		driver.quit();
 	}

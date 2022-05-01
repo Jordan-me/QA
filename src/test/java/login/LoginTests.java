@@ -1,7 +1,6 @@
 package login;
 
 import java.io.IOException;
-import java.util.HashMap;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -26,7 +25,7 @@ import sanityTest.VarsKey;
 @TestMethodOrder(OrderAnnotation.class)
 public class LoginTests {
 	public static WebDriver driver;
-	private LoginServices loginServices;
+	private LoginServices loginServices;  
 	private final static Logger logger = LogManager.getLogger();
 	private static final long TIME_INTERVAL = 2000;
 
@@ -49,7 +48,6 @@ public class LoginTests {
 				"C:\\Users\\Yarden\\Downloads\\chromedriver_win32\\chromedriver.exe");
 
 		driver = new ChromeDriver();
-		new HashMap<String, Object>();
 		loginServices = new LoginServices();
 		Thread.sleep(TIME_INTERVAL);
 	}

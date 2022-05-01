@@ -1,6 +1,5 @@
 package sanityTest;
 import java.io.IOException;
-import java.util.HashMap;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -46,7 +45,7 @@ public class SanityTest {
 	
 	@Test
 	@Order(1)
-	public void loginTest() {
+	public void sanityTest() {
 		try {
 			
 			LoginServices loginServices = new LoginServices();

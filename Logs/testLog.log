@@ -1,30 +1,179 @@
-[INFO ] 2022-04-30 22:45:33.192 [main] LoginTests - 		ReadExcl (readExcel) -> searching for file: variables.xlsx
-[INFO ] 2022-04-30 22:45:33.199 [main] LoginTests - 		ReadExcl (readExcel) -> the file is .xlsx
-[INFO ] 2022-04-30 22:45:33.903 [main] LoginTests - 		ReadExcl (readExcel) -> export sheet: input
-[INFO ] 2022-04-30 22:45:33.903 [main] LoginTests - 		ReadExcl (readExcel) -> total rows (4)
-[INFO ] 2022-04-30 22:45:33.909 [main] LoginTests - Login testsets - begin
+[INFO ] 2022-05-01 12:07:57.742 [main] SanityTest - Sanity testsets - begin
 
-[INFO ] 2022-04-30 22:45:38.435 [main] LoginTests - Login happy flow test - begin
-[INFO ] 2022-04-30 22:45:38.439 [main] LoginTests - 		ReadExcl (readExcel) -> return velue: userName = Yardenale
-[INFO ] 2022-04-30 22:45:38.440 [main] LoginTests - 		ReadExcl (readExcel) -> return velue: password = Ya111111#
-[INFO ] 2022-04-30 22:45:45.402 [main] LoginTests - 	LoginServices (login) -> Login button pressed
-[INFO ] 2022-04-30 22:45:45.670 [main] LoginTests - 	LoginServices (login) -> Username and password fields have been filled
-[INFO ] 2022-04-30 22:45:49.981 [main] LoginTests - 	Login happy flow test - Passed
-[INFO ] 2022-04-30 22:45:49.981 [main] LoginTests - Login happy flow test - end
-[INFO ] 2022-04-30 22:45:54.349 [main] LoginTests - Login with wrong password test - begin
-[INFO ] 2022-04-30 22:45:54.349 [main] LoginTests - 		ReadExcl (readExcel) -> return velue: userName = Yardenale
-[INFO ] 2022-04-30 22:45:54.349 [main] LoginTests - 		ReadExcl (readExcel) -> return velue: wrongPassword = eam
-[INFO ] 2022-04-30 22:45:56.941 [main] LoginTests - 	LoginServices (login) -> Login button pressed
-[INFO ] 2022-04-30 22:45:57.249 [main] LoginTests - 	LoginServices (login) -> Username and password fields have been filled
-[INFO ] 2022-04-30 22:46:01.437 [main] LoginTests - 	Login with wrong password test - Passed
-[INFO ] 2022-04-30 22:46:01.437 [main] LoginTests - Login with wrong password test - end
-[INFO ] 2022-04-30 22:46:05.663 [main] LoginTests - Login with wrong user name test - begin
-[INFO ] 2022-04-30 22:46:05.665 [main] LoginTests - 		ReadExcl (readExcel) -> return velue: wrongUserName = wrongUsername
-[INFO ] 2022-04-30 22:46:05.665 [main] LoginTests - 		ReadExcl (readExcel) -> return velue: password = Ya111111#
-[INFO ] 2022-04-30 22:46:08.090 [main] LoginTests - 	LoginServices (login) -> Login button pressed
-[INFO ] 2022-04-30 22:46:08.350 [main] LoginTests - 	LoginServices (login) -> Username and password fields have been filled
-[INFO ] 2022-04-30 22:46:12.492 [main] LoginTests - 	Login with wrong user name test - Passed
-[INFO ] 2022-04-30 22:46:12.492 [main] LoginTests - Login with wrong user name test - end
+[INFO ] 2022-05-01 12:08:00.131 [main] SanityTest - 		ReadExcl (readExcel) -> searching for file: variables.xlsx
+[INFO ] 2022-05-01 12:08:00.132 [main] SanityTest - 		ReadExcl (readExcel) -> the file is .xlsx
+[INFO ] 2022-05-01 12:08:00.874 [main] SanityTest - 		ReadExcl (readExcel) -> export sheet: input
+[INFO ] 2022-05-01 12:08:00.874 [main] SanityTest - 		ReadExcl (readExcel) -> total rows (11)
+[INFO ] 2022-05-01 12:08:00.899 [main] SanityTest - 		ReadExcl (readExcel) -> return velue: userName = Yardenale
+[INFO ] 2022-05-01 12:08:00.899 [main] SanityTest - 		ReadExcl (readExcel) -> return velue: password = Ya111111#
+[INFO ] 2022-05-01 12:08:04.075 [main] SanityTest - 	LoginServices (login) -> Login button pressed
+[INFO ] 2022-05-01 12:08:04.383 [main] SanityTest - 	LoginServices (login) -> Username and password fields have been filled
+[ERROR] 2022-05-01 12:08:13.890 [main] SanityTest - 	Sort Books By Title test - failed:
+		 expected:<[Understanding ECMAScript 6, Eloquent JavaScript, Second Edition, Programming JavaScript Applications, You Don't Know JS, Speaking JavaScript, Designing Evolvable Web APIs with ASP.NET, Learning JavaScript Design Patterns, Git Pocket Guide]> but was:<[Git Pocket Guide, Learning JavaScript Design Patterns, Designing Evolvable Web APIs with ASP.NET, Speaking JavaScript, You Don't Know JS, Programming JavaScript Applications, Eloquent JavaScript, Second Edition, Understanding ECMAScript 6]>
+[INFO ] 2022-05-01 12:08:13.890 [main] SanityTest - Sort Books By Title test - end
+[INFO ] 2022-05-01 12:08:13.891 [main] SanityTest - 		ReadExcl (readExcel) -> return velue: searchString = Git
+[INFO ] 2022-05-01 12:08:14.860 [main] SanityTest - 	SearchServices (search) -> Search box filled
+[INFO ] 2022-05-01 12:08:15.513 [main] SanityTest - 	AddBookServices (addBook) -> Selected book 
+[INFO ] 2022-05-01 12:08:15.781 [main] SanityTest - 	AddBookServices (addBook) -> Selected book added to my collection 
+[INFO ] 2022-05-01 12:08:20.851 [main] SanityTest - 	Sanity test - passed
+[INFO ] 2022-05-01 12:08:20.851 [main] SanityTest - Sanity test - end
+[INFO ] 2022-05-01 12:08:20.867 [main] SanityTest - Sanity testsets - end
 
-[INFO ] 2022-04-30 22:46:13.258 [main] LoginTests - Login testsets - end
+[INFO ] 2022-05-01 12:08:30.896 [main] LoginTests - 		ReadExcl (readExcel) -> searching for file: variables.xlsx
+[INFO ] 2022-05-01 12:08:30.900 [main] LoginTests - 		ReadExcl (readExcel) -> the file is .xlsx
+[INFO ] 2022-05-01 12:08:31.475 [main] LoginTests - 		ReadExcl (readExcel) -> export sheet: input
+[INFO ] 2022-05-01 12:08:31.475 [main] LoginTests - 		ReadExcl (readExcel) -> total rows (11)
+[INFO ] 2022-05-01 12:08:31.484 [main] LoginTests - Login testsets - begin
+
+[INFO ] 2022-05-01 12:08:35.830 [main] LoginTests - Login happy flow test - begin
+[INFO ] 2022-05-01 12:08:35.831 [main] LoginTests - 		ReadExcl (readExcel) -> return velue: userName = Yardenale
+[INFO ] 2022-05-01 12:08:35.832 [main] LoginTests - 		ReadExcl (readExcel) -> return velue: password = Ya111111#
+[INFO ] 2022-05-01 12:08:38.900 [main] LoginTests - 	LoginServices (login) -> Login button pressed
+[INFO ] 2022-05-01 12:08:39.230 [main] LoginTests - 	LoginServices (login) -> Username and password fields have been filled
+[INFO ] 2022-05-01 12:08:43.512 [main] LoginTests - 	Login happy flow test - Passed
+[INFO ] 2022-05-01 12:08:43.513 [main] LoginTests - Login happy flow test - end
+[INFO ] 2022-05-01 12:08:47.732 [main] LoginTests - Login with wrong password test - begin
+[INFO ] 2022-05-01 12:08:47.732 [main] LoginTests - 		ReadExcl (readExcel) -> return velue: userName = Yardenale
+[INFO ] 2022-05-01 12:08:47.732 [main] LoginTests - 		ReadExcl (readExcel) -> return velue: wrongPassword = eam
+[INFO ] 2022-05-01 12:08:50.067 [main] LoginTests - 	LoginServices (login) -> Login button pressed
+[INFO ] 2022-05-01 12:08:50.367 [main] LoginTests - 	LoginServices (login) -> Username and password fields have been filled
+[INFO ] 2022-05-01 12:08:54.516 [main] LoginTests - 	Login with wrong password test - Passed
+[INFO ] 2022-05-01 12:08:54.517 [main] LoginTests - Login with wrong password test - end
+[INFO ] 2022-05-01 12:08:58.697 [main] LoginTests - Login with wrong user name test - begin
+[INFO ] 2022-05-01 12:08:58.697 [main] LoginTests - 		ReadExcl (readExcel) -> return velue: wrongUserName = wrongUsername
+[INFO ] 2022-05-01 12:08:58.697 [main] LoginTests - 		ReadExcl (readExcel) -> return velue: password = Ya111111#
+[INFO ] 2022-05-01 12:09:01.169 [main] LoginTests - 	LoginServices (login) -> Login button pressed
+[INFO ] 2022-05-01 12:09:01.440 [main] LoginTests - 	LoginServices (login) -> Username and password fields have been filled
+[INFO ] 2022-05-01 12:09:05.587 [main] LoginTests - 	Login with wrong user name test - Passed
+[INFO ] 2022-05-01 12:09:05.588 [main] LoginTests - Login with wrong user name test - end
+
+[INFO ] 2022-05-01 12:09:06.332 [main] LoginTests - Login testsets - end
+
+[INFO ] 2022-05-01 12:09:21.950 [main] SortTests - Sort testsets - begin
+
+[INFO ] 2022-05-01 12:09:27.383 [main] SortTests - 	LoginServices (login) -> Login button pressed
+[INFO ] 2022-05-01 12:09:27.735 [main] SortTests - 	LoginServices (login) -> Username and password fields have been filled
+[ERROR] 2022-05-01 12:09:38.213 [main] SortTests - 	Sort Books By Title test - failed:
+		 expected:<[Understanding ECMAScript 6, Eloquent JavaScript, Second Edition, Programming JavaScript Applications, You Don't Know JS, Speaking JavaScript, Designing Evolvable Web APIs with ASP.NET, Learning JavaScript Design Patterns, Git Pocket Guide]> but was:<[Git Pocket Guide, Learning JavaScript Design Patterns, Designing Evolvable Web APIs with ASP.NET, Speaking JavaScript, You Don't Know JS, Programming JavaScript Applications, Eloquent JavaScript, Second Edition, Understanding ECMAScript 6]>
+[INFO ] 2022-05-01 12:09:38.213 [main] SortTests - Sort Books By Title test - end
+[INFO ] 2022-05-01 12:09:42.680 [main] SortTests - 	LoginServices (login) -> Login button pressed
+[INFO ] 2022-05-01 12:09:42.943 [main] SortTests - 	LoginServices (login) -> Username and password fields have been filled
+[ERROR] 2022-05-01 12:09:53.672 [main] SortTests - 	Sort Books By Publisher test - failed:
+		 expected:<[Understanding ECMAScript 6, Eloquent JavaScript, Second Edition, Programming JavaScript Applications, You Don't Know JS, Speaking JavaScript, Designing Evolvable Web APIs with ASP.NET, Learning JavaScript Design Patterns, Git Pocket Guide]> but was:<[Eloquent JavaScript, Second Edition, Understanding ECMAScript 6, Git Pocket Guide, Learning JavaScript Design Patterns, Designing Evolvable Web APIs with ASP.NET, Speaking JavaScript, You Don't Know JS, Programming JavaScript Applications]>
+[INFO ] 2022-05-01 12:09:53.672 [main] SortTests - Sort Books By Publisher test - end
+[INFO ] 2022-05-01 12:09:58.863 [main] SortTests - 	LoginServices (login) -> Login button pressed
+[INFO ] 2022-05-01 12:09:59.218 [main] SortTests - 	LoginServices (login) -> Username and password fields have been filled
+[ERROR] 2022-05-01 12:10:09.704 [main] SortTests - 	Sort Books By Author test - failed:
+		 expected:<[Understanding ECMAScript 6, Eloquent JavaScript, Second Edition, Programming JavaScript Applications, You Don't Know JS, Speaking JavaScript, Designing Evolvable Web APIs with ASP.NET, Learning JavaScript Design Patterns, Git Pocket Guide]> but was:<[Learning JavaScript Design Patterns, Speaking JavaScript, Programming JavaScript Applications, Designing Evolvable Web APIs with ASP.NET, You Don't Know JS, Eloquent JavaScript, Second Edition, Understanding ECMAScript 6, Git Pocket Guide]>
+[INFO ] 2022-05-01 12:10:09.704 [main] SortTests - Sort Books By Author test - end
+[INFO ] 2022-05-01 12:10:10.386 [main] SortTests - Sort testsets - end
+
+[INFO ] 2022-05-01 12:10:24.756 [main] SearchTests - 		ReadExcl (readExcel) -> searching for file: variables.xlsx
+[INFO ] 2022-05-01 12:10:24.759 [main] SearchTests - 		ReadExcl (readExcel) -> the file is .xlsx
+[INFO ] 2022-05-01 12:10:25.459 [main] SearchTests - 		ReadExcl (readExcel) -> export sheet: input
+[INFO ] 2022-05-01 12:10:25.459 [main] SearchTests - 		ReadExcl (readExcel) -> total rows (11)
+[INFO ] 2022-05-01 12:10:25.470 [main] SearchTests - Search testsets - begin
+
+[INFO ] 2022-05-01 12:10:27.805 [main] SearchTests - 		ReadExcl (readExcel) -> return velue: searchString = Git
+[INFO ] 2022-05-01 12:10:31.647 [main] SearchTests - 	SearchServices (search) -> Search box filled
+[INFO ] 2022-05-01 12:10:31.725 [main] SearchTests - 	Search happy flow test - passed
+		 
+[INFO ] 2022-05-01 12:10:31.725 [main] SearchTests - Search happy flow test - end
+[INFO ] 2022-05-01 12:10:37.104 [main] SearchTests - 	SearchServices (search) -> Search box filled
+[INFO ] 2022-05-01 12:10:37.153 [main] SearchTests - 	Empty Search test- passed
+		 
+[INFO ] 2022-05-01 12:10:37.153 [main] SearchTests - Empty Search test - end
+[INFO ] 2022-05-01 12:10:42.467 [main] SearchTests - 	SearchServices (search) -> Search box filled
+[INFO ] 2022-05-01 12:10:42.534 [main] SearchTests - 	Empty Search test - passed
+[INFO ] 2022-05-01 12:10:42.534 [main] SearchTests - Empty Search test - end
+[INFO ] 2022-05-01 12:10:43.255 [main] SearchTests - Search testsets - end
+
+[INFO ] 2022-05-01 12:11:09.460 [main] AddBookTests - 		ReadExcl (readExcel) -> searching for file: variables.xlsx
+[INFO ] 2022-05-01 12:11:09.464 [main] AddBookTests - 		ReadExcl (readExcel) -> the file is .xlsx
+[INFO ] 2022-05-01 12:11:10.050 [main] AddBookTests - 		ReadExcl (readExcel) -> export sheet: input
+[INFO ] 2022-05-01 12:11:10.051 [main] AddBookTests - 		ReadExcl (readExcel) -> total rows (11)
+[INFO ] 2022-05-01 12:11:10.058 [main] AddBookTests - Add Book testsets - begin
+
+[INFO ] 2022-05-01 12:11:12.329 [main] AddBookTests - Add Book happy flow test - begin
+[INFO ] 2022-05-01 12:11:12.330 [main] AddBookTests - 		ReadExcl (readExcel) -> return velue: userName = Yardenale
+[INFO ] 2022-05-01 12:11:12.330 [main] AddBookTests - 		ReadExcl (readExcel) -> return velue: password = Ya111111#
+[INFO ] 2022-05-01 12:11:14.812 [main] AddBookTests - 	LoginServices (login) -> Login button pressed
+[INFO ] 2022-05-01 12:11:15.418 [main] AddBookTests - 	LoginServices (login) -> Username and password fields have been filled
+[INFO ] 2022-05-01 12:11:23.225 [main] AddBookTests - 	AddBookServices (addBook) -> Selected book 
+[INFO ] 2022-05-01 12:11:23.445 [main] AddBookTests - 	AddBookServices (addBook) -> Selected book added to my collection 
+[INFO ] 2022-05-01 12:11:28.717 [main] AddBookTests - 	Add Book happy flow test - Passed
+[INFO ] 2022-05-01 12:11:28.718 [main] AddBookTests - Add Book happy flow test - end
+
+[INFO ] 2022-05-01 12:11:29.453 [main] AddBookTests - Add Book testsets - end
+
+[INFO ] 2022-05-01 12:11:45.002 [main] RegisterTests - 		ReadExcl (readExcel) -> searching for file: variables.xlsx
+[INFO ] 2022-05-01 12:11:45.006 [main] RegisterTests - 		ReadExcl (readExcel) -> the file is .xlsx
+[INFO ] 2022-05-01 12:11:45.577 [main] RegisterTests - 		ReadExcl (readExcel) -> export sheet: input
+[INFO ] 2022-05-01 12:11:45.577 [main] RegisterTests - 		ReadExcl (readExcel) -> total rows (11)
+[INFO ] 2022-05-01 12:11:45.584 [main] RegisterTests - Register testsets - begin
+
+[INFO ] 2022-05-01 12:11:50.884 [main] RegisterTests - Register happy flow test - begin
+[INFO ] 2022-05-01 12:11:50.885 [main] RegisterTests - 		ReadExcl (readExcel) -> return velue: regFName = Jordi
+[INFO ] 2022-05-01 12:11:50.885 [main] RegisterTests - 		ReadExcl (readExcel) -> return velue: regLName = D
+[INFO ] 2022-05-01 12:11:50.885 [main] RegisterTests - 		ReadExcl (readExcel) -> return velue: regUserName = JordiD
+[INFO ] 2022-05-01 12:11:50.885 [main] RegisterTests - 		ReadExcl (readExcel) -> return velue: regPassword = RamiMaHakesher1#
+[INFO ] 2022-05-01 12:11:54.229 [main] RegisterTests - 	RegisterSevrice (register) -> firstname [Jordi] filled
+[INFO ] 2022-05-01 12:11:54.363 [main] RegisterTests - 	RegisterSevrice (register) -> lastName [D] filled
+[INFO ] 2022-05-01 12:11:54.487 [main] RegisterTests - 	RegisterSevrice (register) -> userName [JordiD] filled
+[INFO ] 2022-05-01 12:11:54.697 [main] RegisterTests - 	RegisterSevrice (register) -> password [RamiMaHakesher1#] filled
+[INFO ] 2022-05-01 12:11:56.945 [main] RegisterTests - 	RegisterSevrice (register) -> recapthca clicked
+[ERROR] 2022-05-01 12:12:06.126 [main] RegisterTests - 	Register happy flow test - failed:
+		 element click intercepted: Element <button id="register" type="button" class="btn btn-primary">...</button> is not clickable at point (922, 387). Other element would receive the click: <iframe title="recaptcha challenge expires in two minutes" src="https://www.google.com/recaptcha/api2/bframe?hl=en&amp;v=2W_gRz39xX8G13fM-OdyQPlc&amp;k=6LdsKacZAAAAAIxY1X8GuHZljebmKWs8JGp97UK7" name="c-cjv5if1ly5w5" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox" style="width: 400px; height: 580px;"></iframe>
+  (Session info: chrome=100.0.4896.127)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'YARDEN-PC', ip: '172.28.112.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.127, chrome: {chromedriverVersion: 100.0.4896.20 (f9d71f93d32a..., userDataDir: C:\Users\Yarden\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:62490}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 43b6417845db5e1640425fc9aa1aa02d
+[INFO ] 2022-05-01 12:12:06.128 [main] RegisterTests - Register happy flow test - end
+[INFO ] 2022-05-01 12:12:11.211 [main] RegisterTests - Register And Return Main test - begin
+[INFO ] 2022-05-01 12:12:11.211 [main] RegisterTests - 		ReadExcl (readExcel) -> return velue: regFName = Jordi
+[INFO ] 2022-05-01 12:12:11.211 [main] RegisterTests - 		ReadExcl (readExcel) -> return velue: regLName = D
+[INFO ] 2022-05-01 12:12:11.211 [main] RegisterTests - 		ReadExcl (readExcel) -> return velue: regUserName = JordiD
+[INFO ] 2022-05-01 12:12:11.211 [main] RegisterTests - 		ReadExcl (readExcel) -> return velue: regPassword = RamiMaHakesher1#
+[INFO ] 2022-05-01 12:12:14.467 [main] RegisterTests - 	RegisterSevrice (register) -> firstname [Jordi] filled
+[INFO ] 2022-05-01 12:12:14.648 [main] RegisterTests - 	RegisterSevrice (register) -> lastName [D] filled
+[INFO ] 2022-05-01 12:12:14.837 [main] RegisterTests - 	RegisterSevrice (register) -> userName [JordiD] filled
+[INFO ] 2022-05-01 12:12:15.084 [main] RegisterTests - 	RegisterSevrice (register) -> password [RamiMaHakesher1#] filled
+[INFO ] 2022-05-01 12:12:15.149 [main] RegisterTests - 	RegisterSevrice (register) -> gotologin button clicked
+[INFO ] 2022-05-01 12:12:22.339 [main] RegisterTests - 	Register And Return Main test - Passed
+[INFO ] 2022-05-01 12:12:22.340 [main] RegisterTests - Register And Return Main test - end
+[INFO ] 2022-05-01 12:12:27.525 [main] RegisterTests - Register Ineligible Password test - begin
+[INFO ] 2022-05-01 12:12:27.525 [main] RegisterTests - 		ReadExcl (readExcel) -> return velue: regFName = Jordi
+[INFO ] 2022-05-01 12:12:27.525 [main] RegisterTests - 		ReadExcl (readExcel) -> return velue: regLName = D
+[INFO ] 2022-05-01 12:12:27.525 [main] RegisterTests - 		ReadExcl (readExcel) -> return velue: regUserName = JordiD
+[INFO ] 2022-05-01 12:12:27.525 [main] RegisterTests - 		ReadExcl (readExcel) -> return velue: regWrongPassword = Ya111111
+[INFO ] 2022-05-01 12:12:32.102 [main] RegisterTests - 	RegisterSevrice (register) -> firstname [Jordi] filled
+[INFO ] 2022-05-01 12:12:32.228 [main] RegisterTests - 	RegisterSevrice (register) -> lastName [D] filled
+[INFO ] 2022-05-01 12:12:32.346 [main] RegisterTests - 	RegisterSevrice (register) -> userName [JordiD] filled
+[INFO ] 2022-05-01 12:12:32.538 [main] RegisterTests - 	RegisterSevrice (register) -> password [Ya111111] filled
+[ERROR] 2022-05-01 12:12:34.572 [main] RegisterTests - 	Register Ineligible Password test - failed:
+		 target frame detached
+  (Session info: chrome=100.0.4896.127)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'YARDEN-PC', ip: '172.28.112.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.127, chrome: {chromedriverVersion: 100.0.4896.20 (f9d71f93d32a..., userDataDir: C:\Users\Yarden\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:62708}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: fc9fd9e1ed05ed2097513ef1313cb93f
+*** Element info: {Using=xpath, value=//*[@title='reCAPTCHA']}
+[INFO ] 2022-05-01 12:12:34.572 [main] RegisterTests - Register Ineligible Password test - end
+[INFO ] 2022-05-01 12:12:39.785 [main] RegisterTests - Register Without Checkbox test - begin
+[INFO ] 2022-05-01 12:12:39.786 [main] RegisterTests - 		ReadExcl (readExcel) -> return velue: regFName = Jordi
+[INFO ] 2022-05-01 12:12:39.786 [main] RegisterTests - 		ReadExcl (readExcel) -> return velue: regLName = D
+[INFO ] 2022-05-01 12:12:39.786 [main] RegisterTests - 		ReadExcl (readExcel) -> return velue: regUserName = JordiD
+[INFO ] 2022-05-01 12:12:39.786 [main] RegisterTests - 		ReadExcl (readExcel) -> return velue: regPassword = RamiMaHakesher1#
+[INFO ] 2022-05-01 12:12:42.764 [main] RegisterTests - 	RegisterSevrice (register) -> firstname [Jordi] filled
+[INFO ] 2022-05-01 12:12:42.869 [main] RegisterTests - 	RegisterSevrice (register) -> lastName [D] filled
+[INFO ] 2022-05-01 12:12:43.068 [main] RegisterTests - 	RegisterSevrice (register) -> userName [JordiD] filled
+[INFO ] 2022-05-01 12:12:43.275 [main] RegisterTests - 	RegisterSevrice (register) -> password [RamiMaHakesher1#] filled
+[INFO ] 2022-05-01 12:12:43.334 [main] RegisterTests - 	RegisterSevrice (register) -> register button clicked
+[INFO ] 2022-05-01 12:12:47.454 [main] RegisterTests - 		ReadExcl (readExcel) -> return velue: regCaptchaMSG = Please verify reCaptcha to register!
+[INFO ] 2022-05-01 12:12:47.477 [main] RegisterTests - 	Register Without Checkbox test - Passed
+[INFO ] 2022-05-01 12:12:47.477 [main] RegisterTests - Register Without Checkbox test - end
+[INFO ] 2022-05-01 12:12:48.164 [main] RegisterTests - Register testsets - end
 

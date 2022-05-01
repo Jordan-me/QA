@@ -11,13 +11,13 @@ public class LoginServices {
 		//1| open|/
 		driver.get("https://demoqa.com/books");
 		//2 |setWindowSize |1038X680
-		driver.manage().window().maximize();
+		driver.manage().window().maximize();  
 		driver.findElement(By.id("login")).click();
 		logger.info("\tLoginServices (login) -> Login button pressed");
 		//3| type| name = login| click
 		WebElement inputField = driver.findElement(By.id("userName"));
 		inputField.click();
-		inputField.sendKeys(userName);  
+		inputField.sendKeys(userName);    
 		inputField = driver.findElement(By.id("password"));
 		inputField.click();
 		inputField.sendKeys(password);
