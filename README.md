@@ -1,3 +1,3 @@
 # QA
-query tests
+query tests  
 Selenium tests
