@@ -1,0 +1,9 @@
+Book Store App:
+login
+add book to my collection
+website of the book
+Book Store API
+delete account
+delete all books
+search book
+sorts books
